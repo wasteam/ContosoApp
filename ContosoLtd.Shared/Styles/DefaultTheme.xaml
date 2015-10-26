@@ -1,0 +1,11 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--Override system colors-->
+    <x:String x:Key="ProgressBarIndeterminateForegroundThemeBrush">#d2ddf0</x:String>
+    <x:String x:Key="AppBarItemForegroundThemeBrush">#d2ddf0</x:String>
+    <x:String x:Key="AppBarItemPressedForegroundThemeBrush">#132037</x:String>
+    <x:String x:Key="AppBarItemPressedBackgroundThemeBrush">#d2ddf0</x:String>
+    <x:String x:Key="AppBarItemPointerOverForegroundThemeBrush">#d2ddf0</x:String>
+</ResourceDictionary>

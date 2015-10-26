@@ -1,0 +1,59 @@
+<base:PageBase
+    x:Class="ContosoLtd.Views.NewsListPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:was_actions="using:AppStudio.Common.Actions"
+    xmlns:base="using:ContosoLtd"
+    xmlns:layouts="using:ContosoLtd.Layouts"
+    xmlns:controls="using:ContosoLtd.Layouts.Controls"
+    xmlns:triggers="using:ContosoLtd.Triggers"
+    DataContext="{Binding ViewModel, RelativeSource={RelativeSource Self}}"
+
+    mc:Ignorable="d">
+
+    <Page.TopAppBar>
+        <was_actions:ActionsCommandBar x:Name="topAppBar" ActionsSource="{Binding Actions}" IsVisible="{Binding HasActions}"
+                                       Background="{StaticResource AppBarBackground}"
+                                       Width="320" HorizontalAlignment="Right"/>
+    </Page.TopAppBar>
+    <Page.BottomAppBar>
+        <was_actions:ActionsCommandBar x:Name="bottomAppBar" ActionsSource="{Binding Actions}" IsVisible="{Binding HasActions}"
+                                       Background="{StaticResource AppBarBackground}"/>
+    </Page.BottomAppBar>
+    <Grid Background="{StaticResource AppBackground}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="WindowsWidthStates">
+                <VisualState x:Name="NarrowState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="topAppBar.Visibility" Value="Collapsed"/>
+                        <Setter Target="mainPanel.Margin" Value="0,48,0,0"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="MediumState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="720"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="bottomAppBar.Visibility" Value="Collapsed"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Grid x:Name="mainPanel">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <layouts:ListLayout DataContext="{Binding}"
+                                ItemsSource="{Binding Items}"
+                                HasLoadDataErrors="{Binding HasLoadDataErrors, FallbackValue=False}"
+                                ItemClickCommand="{Binding ItemClickCommand}" ListLayoutTemplate="TextCards"/>
+            <controls:DataUpdateInformationControl x:Name="DateTimeInLine" Grid.Row="2" LastUpdateDateTime="{Binding LastUpdated}" Color="{StaticResource PageTitleForeground}" Margin="8,4,8,4" HorizontalAlignment="Left" HasLocalData="{Binding HasLocalData}"/>
+        </Grid>
+    </Grid>
+</base:PageBase>

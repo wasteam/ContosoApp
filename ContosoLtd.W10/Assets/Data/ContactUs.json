@@ -1,0 +1,37 @@
+[
+  {
+    "Type": "DeepLink",
+    "Title": "Address",
+    "Icon": "/Assets/DataImages/Item-dd7eb8ba-7f16-46b0-9a38-ff3ebe9433c5.png",
+    "Target": "bingmaps:?collection=1+157th+Avenue+Northeast%2C+Redmond%2C+WA+98052%2C+United+States&lvl=18",
+    "_id": "180fea45-fa85-4fc4-a3b6-a58f5e67be8e"
+  },
+  {
+    "Type": "DeepLink",
+    "Title": "How to get to",
+    "Icon": "/Assets/DataImages/Item-53e88f6f-42e4-4d2c-ab41-a8d568894434.png",
+    "Target": "bingmaps:?collection=1+157th+Avenue+Northeast%2C+Redmond%2C+WA+98052%2C+United+States&lvl=18",
+    "_id": "6f8776f6-6d7b-41f5-97f0-fe8c9d0007ab"
+  },
+  {
+    "Type": "DeepLink",
+    "Title": "Ph: 1-800-555-0122",
+    "Icon": "/Assets/DataImages/Item-9ce253a3-5d2c-4151-b88c-6188566638a0.png",
+    "Target": "tel:1-800-555-0122",
+    "_id": "b6cd2a1a-aa66-4ca6-8ef1-043b25af6431"
+  },
+  {
+    "Type": "DeepLink",
+    "Title": "info@contoso.com",
+    "Icon": "/Assets/DataImages/Item-18a79169-63d2-4418-931d-dc6f9a6be1a8.png",
+    "Target": "mailto:info@contoso.com",
+    "_id": "8d48c37c-e593-4250-8bd0-e61acf73ab33"
+  },
+  {
+    "Type": "DeepLink",
+    "Title": "www.contoso.com",
+    "Icon": "/Assets/DataImages/Item-492dd772-70d2-480e-b4d5-66c89315293c.png",
+    "Target": "http://www.contoso.com",
+    "_id": "b679087c-8de5-4560-930f-6f00627eae4c"
+  }
+]

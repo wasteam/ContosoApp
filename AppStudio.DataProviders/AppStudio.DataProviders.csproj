@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{39034c14-2423-4eed-9c8a-beff20720c30}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AppStudio.DataProviders</RootNamespace>
+    <AssemblyName>AppStudio.DataProviders</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile32</TargetFrameworkProfile>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">.\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <TargetPlatform Include="WindowsPhoneApp, Version=8.1" />
+    <TargetPlatform Include="Windows, Version=8.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Bing\Parser\BingParser.cs" />
+    <Compile Include="Bing\BingDataConfig.cs" />
+    <Compile Include="Bing\BingDataProvider.cs" />
+    <Compile Include="Bing\BingSchema.cs" />
+    <Compile Include="Core\Parser\GenericParser.cs" />
+    <Compile Include="Core\Utility.cs" />
+    <Compile Include="DynamicStorage\DynamicStorageDataConfig.cs" />
+    <Compile Include="DynamicStorage\DynamicStorageDataProvider.cs" />
+    <Compile Include="Exceptions\OAuthKeysRevokedException.cs" />
+    <Compile Include="Exceptions\QueryTypeNotSupportedException.cs" />
+    <Compile Include="Exceptions\RequestFailedException.cs" />
+    <Compile Include="Exceptions\TooManyRequestsException.cs" />
+    <Compile Include="Exceptions\UserNotFoundException.cs" />
+    <Compile Include="Facebook\Parser\FacebookGraphResponse.cs" />
+    <Compile Include="Facebook\Parser\FacebookParser.cs" />
+    <Compile Include="Facebook\Parser\From.cs" />
+    <Compile Include="Facebook\Parser\GraphData.cs" />
+    <Compile Include="Facebook\FacebookDataConfig.cs" />
+    <Compile Include="Facebook\FacebookDataProvider.cs" />
+    <Compile Include="Facebook\FacebookSchema.cs" />
+    <Compile Include="Flickr\Parser\FlickrParser.cs" />
+    <Compile Include="Flickr\FlickrDataConfig.cs" />
+    <Compile Include="Flickr\FlickrDataProvider.cs" />
+    <Compile Include="Flickr\FlickrSchema.cs" />
+    <Compile Include="Html\Parser\HtmlParser.cs" />
+    <Compile Include="Html\HtmlDataProvider.cs" />
+    <Compile Include="Html\HtmlSchema.cs" />
+    <Compile Include="Instagram\Parser\InstagramCaption.cs" />
+    <Compile Include="Instagram\Parser\InstagramImage.cs" />
+    <Compile Include="Instagram\Parser\InstagramImages.cs" />
+    <Compile Include="Instagram\Parser\InstagramParser.cs" />
+    <Compile Include="Instagram\Parser\InstagramResponse.cs" />
+    <Compile Include="Instagram\Parser\InstagramResponseItem.cs" />
+    <Compile Include="Instagram\Parser\InstagramUser.cs" />
+    <Compile Include="Instagram\InstagramDataConfig.cs" />
+    <Compile Include="Instagram\InstagramDataProvider.cs" />
+    <Compile Include="Instagram\InstagramSchema.cs" />
+    <Compile Include="InternetClient\InternetRequest.cs" />
+    <Compile Include="InternetClient\InternetRequestResult.cs" />
+    <Compile Include="InternetClient\InternetRequestSettings.cs" />
+    <Compile Include="LocalStorage\LocalStorageDataConfig.cs" />
+    <Compile Include="LocalStorage\LocalStorageDataProvider.cs" />
+    <Compile Include="Menu\MenuSchema.cs" />
+    <Compile Include="OAuth\OAuthTokens.cs" />
+    <Compile Include="Rss\Parser\AtomParser.cs" />
+    <Compile Include="Rss\Parser\BaseRssParser.cs" />
+    <Compile Include="Rss\Parser\RssHelper.cs" />
+    <Compile Include="Rss\Parser\RssParser.cs" />
+    <Compile Include="Rss\Parser\Rss2Parser.cs" />
+    <Compile Include="Rss\Parser\RssType.cs" />
+    <Compile Include="Rss\RssDataConfig.cs" />
+    <Compile Include="Rss\RssDataProvider.cs" />
+    <Compile Include="Rss\RssSchema.cs" />
+    <Compile Include="TouchDevelop\Parser\TouchDevelopItem.cs" />
+    <Compile Include="TouchDevelop\Parser\TouchDevelopParser.cs" />
+    <Compile Include="TouchDevelop\Parser\TouchDevelopSerialized.cs" />
+    <Compile Include="TouchDevelop\TouchDevelopDataConfig.cs" />
+    <Compile Include="TouchDevelop\TouchDevelopDataProvider.cs" />
+    <Compile Include="TouchDevelop\TouchDevelopSchema.cs" />
+    <Compile Include="Twitter\Parser\OAuthEncoder.cs" />
+    <Compile Include="Twitter\Parser\OAuthParameter.cs" />
+    <Compile Include="Twitter\Parser\OAuthRequest.cs" />
+    <Compile Include="Twitter\Parser\OAuthRequestBuilder.cs" />
+    <Compile Include="Twitter\Parser\OAuthUriExtensions.cs" />
+    <Compile Include="Twitter\Parser\TwitterParser.cs" />
+    <Compile Include="Twitter\Parser\TwitterSearchParser.cs" />
+    <Compile Include="Twitter\Parser\TwitterSearchResult.cs" />
+    <Compile Include="Twitter\Parser\TwitterTimeLineItem.cs" />
+    <Compile Include="Twitter\Parser\TwitterTimelineParser.cs" />
+    <Compile Include="Twitter\Parser\TwitterUser.cs" />
+    <Compile Include="Twitter\TwitterDataConfig.cs" />
+    <Compile Include="Twitter\TwitterDataProvider.cs" />
+    <Compile Include="Twitter\TwitterSchema.cs" />
+    <Compile Include="YouTube\Parser\ContentDetails.cs" />
+    <Compile Include="YouTube\Parser\DefaultThumbnail.cs" />
+    <Compile Include="YouTube\Parser\HighThumbnail.cs" />
+    <Compile Include="YouTube\Parser\LookupResult.cs" />
+    <Compile Include="YouTube\Parser\MediumThumbnail.cs" />
+    <Compile Include="YouTube\Parser\RelatedPlaylists.cs" />
+    <Compile Include="YouTube\Parser\ResourceId.cs" />
+    <Compile Include="YouTube\Parser\Thumbnails.cs" />
+    <Compile Include="YouTube\Parser\YouTubeChannelLookupResult.cs" />
+    <Compile Include="YouTube\Parser\YouTubePlaylistParser.cs" />
+    <Compile Include="YouTube\Parser\YouTubePlaylistResult.cs" />
+    <Compile Include="YouTube\Parser\YouTubePlaylistSnippet.cs" />
+    <Compile Include="YouTube\Parser\YouTubeResult.cs" />
+    <Compile Include="YouTube\Parser\YouTubeSearchId.cs" />
+    <Compile Include="YouTube\Parser\YouTubeSearchParser.cs" />
+    <Compile Include="YouTube\Parser\YouTubeSearchResult.cs" />
+    <Compile Include="YouTube\Parser\YouTubeSearchSnippet.cs" />
+    <Compile Include="YouTube\YouTubeDataConfig.cs" />
+    <Compile Include="YouTube\YouTubeDataProvider.cs" />
+    <Compile Include="YouTube\YouTubeSchema.cs" />
+    <Compile Include="DataProviderBase.cs" />
+    <Compile Include="IParser.cs" />
+    <Compile Include="SchemaBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+</ItemGroup>
+
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid+MonoTouch\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

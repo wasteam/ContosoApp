@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+  <Identity Name="Microsoft.AppStudioContosoSampleApp" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" Version="1.11.0.0" />
+
+  <Properties>
+    <DisplayName>AppStudio Contoso Sample App</DisplayName>
+    <PublisherDisplayName>Microsoft Corporation</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Prerequisites>
+    <OSMinVersion>6.3.0</OSMinVersion>
+    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
+  </Prerequisites>
+
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="ContosoLtd.App">
+      <m2:VisualElements DisplayName="Contoso Ltd" Description="Everything you need to know about a company in a quick and simple app.  Use this template to create an app about your Company"
+                         ForegroundText="light" 
+                         BackgroundColor="#4774ab"
+                         Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png">
+
+        <m2:DefaultTile ShortName="Contoso Ltd"
+                        Wide310x150Logo="Assets\Wide310x150Logo.png"
+                        Square70x70Logo="Assets\Square70x70Logo.png">
+          <m2:TileUpdate Recurrence="halfHour" UriTemplate="http://ds.winappstudio.com/api/tile/dd1bf21f-bb58-4f15-977e-4adbf1889a3b/784a960e-af92-484e-ba3b-a011deaad1d6?columnName=Image" />
+          <m2:ShowNameOnTiles>
+            <m2:ShowOn Tile="square150x150Logo" />
+            <m2:ShowOn Tile="wide310x150Logo" />
+          </m2:ShowNameOnTiles>
+        </m2:DefaultTile>
+        <m2:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#4774ab"/>
+        <m2:ApplicationView MinWidth="width320" />
+      </m2:VisualElements>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

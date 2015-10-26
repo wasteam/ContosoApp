@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
+  <Identity Name="Microsoft.AppStudioContosoSampleApp" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" Version="1.11.0.0" />
+
+  <mp:PhoneIdentity PhoneProductId="dd1bf21f-bb58-4f15-977e-4adbf1889a3b" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
+  <Properties>
+    <DisplayName>AppStudio Contoso Sample App</DisplayName>
+    <PublisherDisplayName>Microsoft Corporation</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Prerequisites>
+    <OSMinVersion>6.3.1</OSMinVersion>
+    <OSMaxVersionTested>6.3.1</OSMaxVersionTested>
+  </Prerequisites>
+
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="ContosoLtd.App">
+      <m3:VisualElements DisplayName="Contoso Ltd" Description="Everything you need to know about a company in a quick and simple app.  Use this template to create an app about your Company"
+          Square150x150Logo="Assets\Logo.png"
+          Square44x44Logo="Assets\SmallLogo.png"
+          ForegroundText="light"
+          BackgroundColor="transparent">
+        <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png" ShortName="Contoso Ltd">
+          <m3:TileUpdate Recurrence="halfHour" UriTemplate="http://ds.winappstudio.com/api/tile/dd1bf21f-bb58-4f15-977e-4adbf1889a3b/784a960e-af92-484e-ba3b-a011deaad1d6?columnName=Image" />
+          <m3:ShowNameOnTiles>
+            <m3:ShowOn Tile="square150x150Logo" />
+            <m3:ShowOn Tile="wide310x150Logo" />
+          </m3:ShowNameOnTiles>
+        </m3:DefaultTile>
+        <m3:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="transparent"/>
+        <m3:ApplicationView MinWidth="width320"/>
+        <!--Used in XAML Designer. DO NOT REMOVE-->
+        <m3:InitialRotationPreference>
+          <m3:Rotation Preference="portrait" />
+        </m3:InitialRotationPreference>
+      </m3:VisualElements>
+
+    </Application>
+  </Applications>
+
+  <!-- Microphone capability required for TextToSpeech -->
+  <Capabilities>
+    <Capability Name="internetClientServer" />
+    <DeviceCapability Name="microphone" />
+  </Capabilities>
+</Package>
